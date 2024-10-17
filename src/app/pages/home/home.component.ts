@@ -20,5 +20,7 @@ export class HomeComponent {
   deletePhoto(id: number) {
     this.photosSvc.deletePhoto(id).subscribe();
   }
-  addFavorite(id: number);
+  addToFavorite(photo: IPhots) {
+    this.photosSvc.addToFavorite(photo);
+  }
 }
