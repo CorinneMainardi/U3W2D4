@@ -1,0 +1,13 @@
+<div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+  <!-- card -->
+  <div *ngFor="let photo of photos" class="col">
+    <div class="card h-100">
+      <img [src]="photo.url" class="card-img-top" alt="{{ photo.url }}" />
+      <div class="card-body">
+        <h5 class="card-title">{{ photo.title }}</h5>
+      </div>
+      <a class="btn btn-success" (click)="addFavorite(photo.id)">Mi piace</a>
+      <a class="btn btn-primary" (click)="deletePhoto(photo.id)">Cancella</a>
+    </div>
+  </div>
+</div>
